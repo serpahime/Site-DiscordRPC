@@ -7,7 +7,7 @@
 // - Демо: showDecoration('red_angry') - показать на 5 секунд
 const DISCORD_TOKEN = 'MTQxMTI2OTA4NDY3ODcyMTY0Nw.G_PgrI.VeGg4KWti0p9TTicd4GE3r_x6mfMn5VX-J4VPI';
 // Public presence (no token) via Lanyard
-let DISCORD_USER_ID = '';
+let DISCORD_USER_ID = '1370102381441978510';
 let ws = null;
 let heartbeatInterval = null;
 let userData = null;
@@ -1927,4 +1927,5 @@ window.forceKeepDecoration = () => {
         loadRealDiscordDecoration(avatarContainer, storedUserData.profile_decorations);
         console.log('Forced decoration reload');
     }
+
 }; 
