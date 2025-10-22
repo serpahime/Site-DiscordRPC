@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You died!</title>
+    <link rel="icon" type="image/png" href="assets/uzi.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .container {
+            background: transparent;
+            backdrop-filter: none;
+        }
+
+        .profile-card {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .music-player {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="assets/11677672-uhd_3840_2160_60fps.mp4" type="video/mp4">
+    </video>
+
+    <div class="preloader">
+        <div class="preloader-text">[click to enter]</div>
+    </div>
+
+    <div class="volume-control-global">
+        <i class="fas fa-volume-up"></i>
+        <input type="range" class="volume-slider-global" min="0" max="100" value="100">
+    </div>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="banner" id="banner-container"></div>
+            <div class="profile-content">
+                <div class="profile-header">
+                    <div class="avatar-container">
+                        <img id="avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Аватар">
+                        <div id="status" class="status-indicator"></div>
+                    </div>
+                    <h1 id="username"></h1>
+                    <p id="ip-address">♥ 0.1.0.1.0.1.0.1.0</p>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-avatar">
+                        <img id="activity-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Activity">
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-name"></div>
+                        <div class="activity-status"></div>
+                        <div class="activity-details">
+                            <div class="activity-type"></div>
+                            <div class="activity-duration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links" id="social-links"></div>
+                <div class="views-counter">
+                    <span id="view-count"></span> 
+                </div>
+                <div class="discord-activity" id="discord-activity"></div>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <div class="time-display">
+                <span class="current-time">0:00</span>
+                <span class="total-time">NaN:NaN</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="controls">
+                <button class="prev"><i class="fas fa-backward"></i></button>
+                <button class="play-pause"><i class="fas fa-play"></i></button>
+                <button class="next"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
